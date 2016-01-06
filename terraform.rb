@@ -18,7 +18,6 @@ class Terraform < Formula
     github.com/apparentlymart/go-rundeck-api cddcfbabbe903e9c8df35ff9569dbb8d67789200
     github.com/armon/circbuf bbbad097214e2918d8543d5201d12bfd7bca254d
     github.com/aws/aws-sdk-go 4f9a300f2af32035b3ae8bd0ce9b0fe8412df743
-    github.com/awslabs/aws-sdk-go master
     github.com/coreos/etcd dd733ca51d5f4c60def1403739b5701a7a7751c4
     github.com/cyberdelia/heroku-go 8344c6a3e281a99a693f5b71186249a8620eeb6b
     github.com/digitalocean/godo ccd7d9b6bbf2361014a8334ad3c9280b88299ef9

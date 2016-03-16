@@ -49,5 +49,12 @@ class AwsSso < Formula
   end
 
   # TODO: re-add tests
+
+  def caveats; <<-EOS.undent
+      aws-sso requires some setup before it's ready to use. Run `aws-sso setup` to set up a config file.
+
+      For more detailed info, see the README on Bitbucket: https://bitbucket.org/ensighten-ondemand/aws_sso/src/master/README.md
+    EOS
+  end
 end
 

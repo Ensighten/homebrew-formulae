@@ -5,7 +5,7 @@ class AwsSso < Formula
 
   # This will prompt you for your Bitbucket password... kind of a pain.
   # TODO: Use git protocol?
-  url "https://bitbucket.org/ensighten-ondemand/aws_sso/get/#{version}.tar.gz"
+  url "https://bitbucket.org/ensighten-ondemand/aws_sso.git", :tag => version
   head "https://bitbucket.org/ensighten-ondemand/aws_sso.git", :branch => 'master'
 
   brew_deps = %w[

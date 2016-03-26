@@ -3,9 +3,9 @@ require "language/go"
 class Terraform < Formula
   desc "Tool to build, change, and version infrastructure"
   homepage "https://www.terraform.io/"
+  url "https://github.com/Ensighten/terraform/archive/v#{version}.tar.gz"
   version '0.6.12-ens.2'
   # url "https://github.com/hashicorp/terraform/archive/v#{version}.tar.gz"
-  url "https://github.com/Ensighten/terraform/archive/v#{version}.tar.gz"
   sha256 '76e89416c06321b2d0cd6944cac13e93aaa92cc3c4d25bf143254ddc28ad0647'
 
   # head 'https://github.com/hashicorp/terraform.git'

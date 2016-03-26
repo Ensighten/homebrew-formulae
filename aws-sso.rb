@@ -1,12 +1,12 @@
 class AwsSso < Formula
-  desc "Tool to generate temporary AWS credentials using Okta SSO"
-  homepage "https://bitbucket.org/ensighten-ondemand/aws_sso.git"
-  version '1.0.1'
+  desc "Generate temporary AWS credentials using Okta SSO"
+  homepage "https://bitbucket.org/ensighten-ondemand/aws_sso"
 
   # This will prompt you for your Bitbucket password... kind of a pain.
   # TODO: Use git protocol?
-  url "https://bitbucket.org/ensighten-ondemand/aws_sso.git", :tag => version
-  head "https://bitbucket.org/ensighten-ondemand/aws_sso.git", :branch => 'master'
+  url "https://bitbucket.org/ensighten-ondemand/aws_sso/get/#{version}.tar.gz"
+  version "1.0.1"
+  head "https://bitbucket.org/ensighten-ondemand/aws_sso.git", :branch => "master"
 
   brew_deps = %w[
     python
@@ -14,7 +14,7 @@ class AwsSso < Formula
   ]
 
   brew_deps.each do |x|
-	depends_on x
+    depends_on x
   end
 
   py_deps = %w[
@@ -28,7 +28,7 @@ class AwsSso < Formula
   py_deps.each_slice(2) do |x, y|
     resource x do
       url "https://pypi.python.org/packages/source/#{x}.tar.gz"
-      sha256 "#{y}"
+      sha256 y
     end
   end
 
@@ -49,13 +49,16 @@ class AwsSso < Formula
     bin.env_script_all_files(libexec/"bin", :PYTHONPATH => ENV["PYTHONPATH"])
   end
 
-  # TODO: re-add tests
-
   def caveats; <<-EOS.undent
       aws-sso requires some setup before it's ready to use. Run `aws-sso setup` to set up a config file.
 
       For more detailed info, see the README on Bitbucket: https://bitbucket.org/ensighten-ondemand/aws_sso/src/master/README.md
     EOS
   end
-end
 
+  test do
+    system "true"
+# TODO: Need something in the app that exits cleanly when run no input
+#    system "#{bin}/aws-sso"
+  end
+end

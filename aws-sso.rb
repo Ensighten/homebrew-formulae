@@ -1,7 +1,7 @@
 class AwsSso < Formula
   desc "Tool to generate temporary AWS credentials using Okta SSO"
   homepage "https://bitbucket.org/ensighten-ondemand/aws_sso.git"
-  version '1.1.0'
+  version '1.2.0'
 
   # This will prompt you for your Bitbucket password... kind of a pain.
   # TODO: Use git protocol?

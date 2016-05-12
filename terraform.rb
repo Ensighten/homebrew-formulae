@@ -3,26 +3,22 @@ require "language/go"
 class Terraform < Formula
   desc "Tool to build, change, and version infrastructure"
   homepage "https://www.terraform.io/"
-  version '0.6.12-ens.2'
-  # url "https://github.com/hashicorp/terraform/archive/v#{version}.tar.gz"
-  url "https://github.com/Ensighten/terraform/archive/v#{version}.tar.gz"
-  sha256 '76e89416c06321b2d0cd6944cac13e93aaa92cc3c4d25bf143254ddc28ad0647'
+  # url "https://github.com/hashicorp/terraform/archive/v0.6.15.tar.gz"
+  # sha256 "5dc7cb1d29dee3de9ed9efacab7e72aa447052c96ae8269d932f6a979871a852"
+  # head "https://github.com/hashicorp/terraform.git"
 
-  # head 'https://github.com/hashicorp/terraform.git'
-  head "https://github.com/Ensighten/terraform.git"
+  version '0.6.16-ens.1'
+  url "https://github.com/Ensighten/terraform/archive/v#{version}.tar.gz"
+  sha256 '8a016620f2d861acbe72d9ac26ea7619de7633fc34d466e5872a5f8944e35ce5'
+  # To test a particular revision before release, set the repo & ref, then:
+  # `brew install ensighten/formulae/terraform --HEAD`
+  head "https://github.com/Ensighten/terraform.git", "ref" => "v0.6.16-ens"
 
   depends_on "go" => :build
-  depends_on "godep" => :build
 
   terraform_deps = %w[
     github.com/mitchellh/gox 770c39f64e66797aa46b70ea953ff57d41658e40
     github.com/mitchellh/iochan 87b45ffd0e9581375c491fef3d32130bb15c5bd7
-    github.com/Azure/azure-sdk-for-go bc148c2c7ee5113748941126b465e4ad6eee8e1d
-    github.com/aws/aws-sdk-go bc2c5714d312337494394909e7cc3a19a2e68530
-    github.com/cenkalti/backoff 4dc77674aceaabba2c7e3da25d4c823edfb73f99
-    github.com/davecgh/go-spew 5215b55f46b2b919f50a1df0eaa5886afe4e3b3d
-    gopkg.in/yaml.v2 f7716cbe52baa25d2e9b0d0da546fcf909fc16b4
-    github.com/golang/protobuf 45bba206dd5270d96bac4942dcfe515726613249
   ]
 
   terraform_deps.each_slice(2) do |x, y|
@@ -33,10 +29,6 @@ class Terraform < Formula
 
   go_resource "golang.org/x/tools" do
     url "https://go.googlesource.com/tools.git", :revision => "977844c7af2aa555048a19d28e9fe6c392e7b8e9"
-  end
-
-  go_resource "google.golang.org/grpc" do
-    url "https://github.com/grpc/grpc-go.git", :revision => "5d64098b94ee9dbbea8ddc130208696bcd199ba4"
   end
 
   def install
@@ -60,10 +52,11 @@ class Terraform < Formula
     end
 
     cd terrapath do
-      terraform_files = `go list ./...`.lines.map { |f| f.strip unless f.include? "/vendor/" }.compact
       # v0.6.12 - source contains tests which fail if these environment variables are set locally.
       ENV.delete "AWS_ACCESS_KEY"
       ENV.delete "AWS_SECRET_KEY"
+
+      terraform_files = `go list ./...`.lines.map { |f| f.strip unless f.include? "/vendor/" }.compact
       system "go", "test", *terraform_files
 
       mkdir "bin"

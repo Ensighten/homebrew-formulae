@@ -49,7 +49,9 @@ class AwsSso < Formula
     bin.env_script_all_files(libexec/"bin", :PYTHONPATH => ENV["PYTHONPATH"])
   end
 
-  # TODO: re-add tests
+  test do
+    system "aws-sso", "version"
+  end
 
   def caveats; <<-EOS.undent
       aws-sso requires some setup before it's ready to use. Run `aws-sso setup` to set up a config file.

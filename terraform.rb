@@ -7,9 +7,9 @@ class Terraform < Formula
   # sha256 "5dc7cb1d29dee3de9ed9efacab7e72aa447052c96ae8269d932f6a979871a852"
   # head "https://github.com/hashicorp/terraform.git"
 
-  version '0.6.16-ens.1'
+  version '0.6.16-ens.3'
   url "https://github.com/Ensighten/terraform/archive/v#{version}.tar.gz"
-  sha256 '8a016620f2d861acbe72d9ac26ea7619de7633fc34d466e5872a5f8944e35ce5'
+  sha256 '140a98566266ae73de0a33223d66d3b03395f77f28c403e0d5e1f097593b91c8'
   # To test a particular revision before release, set the repo & ref, then:
   # `brew install ensighten/formulae/terraform --HEAD`
   head "https://github.com/Ensighten/terraform.git", "ref" => "v0.6.16-ens"

@@ -10,9 +10,9 @@ class Terraform < Formula
   version '0.6.16-ens.4'
   url "https://github.com/Ensighten/terraform/archive/v#{version}.tar.gz"
   sha256 '4b809279a6ebd114252c40eac27d8ab379f52c9d8b68670c67c6e5f07e75b821'
-  # To test a particular revision before release, set the repo & ref, then:
+  # To test a particular revision before release, set the repo & revision, then:
   # `brew install ensighten/formulae/terraform --HEAD`
-  head "https://github.com/Ensighten/terraform.git", "ref" => "v0.6.16-ens"
+  # head "https://github.com/Ensighten/terraform.git", revision: "v0.6.16-ens"
 
   depends_on "go" => :build
 

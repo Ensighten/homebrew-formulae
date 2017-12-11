@@ -9,7 +9,7 @@ class Terraform < Formula
 
   version '0.6.16-ens.18'
   url "https://github.com/Ensighten/terraform/archive/v#{version}.tar.gz"
-  sha256 '8c7856c705246a9791199f26fd582ef31cc8da8297b7c5bb44674a1bafc417ea'
+  sha256 '9e9f517b528366aa0bb916000f94bfe972ca3560e2ea987069094d824582eded'
   # To test a particular revision before release, set the head attribute's repo & revision, then:
   # `brew install ./terraform.rb --HEAD`
   # head "https://github.com/Ensighten/terraform.git", revision: "v0.6.16-ens"

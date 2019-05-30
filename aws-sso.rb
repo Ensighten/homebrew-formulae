@@ -2,9 +2,9 @@ class AwsSso < Formula
   desc "Tool to generate temporary AWS credentials using Okta SSO"
   homepage "https://github.com/homebrew-formulae/homebrew-aws-sso/homebrew-aws-sso.git"
 
-  url "https://github.com/Ensighten/homebrew-formulae/releases/download/v1.5.3/aws-profile_1.5.3_mac.tbz2"
-  sha256 "83d71f77553aa10bd4e93d33c11fd6fc47952a1796adf9e044177615dd584718"
-  version "1.5.3"
+  url "https://github.com/Ensighten/homebrew-formulae/releases/download/v1.5.4/aws-profile_1.5.4_mac.tbz2"
+  sha256 "ca6e4e233fdc6e6d34164da7e86230cc011733b06dd703f346f55aa1eae13971"
+  version "1.5.4"
 
   bottle :unneeded
 

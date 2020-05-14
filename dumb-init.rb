@@ -1,5 +1,5 @@
 class AwsSso < Formula
-  desc "A minimal init system for Linux containers"
+  desc "A simple process supervisor that forwards signals to children."
   homepage "https://github.com/Yelp/dumb-init"
 
   url "https://github.com/Ensighten/homebrew-formulae/releases/download/v1.2.2.dumbinit/dumb-init_1.2.2_mac.bz2"

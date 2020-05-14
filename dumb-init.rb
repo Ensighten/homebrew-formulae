@@ -1,4 +1,4 @@
-class AwsSso < Formula
+class DumbInit < Formula
   desc "A simple process supervisor that forwards signals to children."
   homepage "https://github.com/Yelp/dumb-init"
 

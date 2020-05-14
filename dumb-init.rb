@@ -13,6 +13,6 @@ class DumbInit < Formula
   end
 
   test do
-    system "aws-profile", "--help"
+    system "dumb-init", "--help"
   end
 end

@@ -1,6 +1,6 @@
 cask 'aws-okta' do
-  version '0.0.20'
-  sha256 '80c3e9d56277bf00ca5b005a46d966efb9390e4a4136e95350af21d7ec57e3a7'
+  version '0.0.21'
+  sha256 'c6e864ad6b3015f7711d06ce929a0f13526ab8884efd1115570ca42f67ca2e97'
 
   url "https://github.com/Ensighten/homebrew-formulae/releases/download/v#{version}.aws-okta/aws-okta-darwin-amd64.dmg"
   name 'aws-okta'

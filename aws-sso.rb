@@ -6,8 +6,6 @@ class AwsSso < Formula
   sha256 "646620608adeeebba4a17ef7e33e6338d5f791c358b2837dc61db0728e786482"
   version "1.5.7"
 
-  bottle :unneeded
-
   def install
     bin.install "aws-profile"
   end

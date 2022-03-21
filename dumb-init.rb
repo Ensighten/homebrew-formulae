@@ -6,8 +6,6 @@ class DumbInit < Formula
   sha256 "4a3fc83f690156bdb1d80d3e181583f02265dfbb1f2c41935d79842ce0c4af90"
   version "1.2.2"
 
-  bottle :unneeded
-
   def install
     bin.install "dumb-init"
   end

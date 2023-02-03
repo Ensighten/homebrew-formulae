@@ -6,6 +6,6 @@ cask 'ansible-jinja2-tester' do
     name 'Ansible Jinja2 Tester'
     homepage 'https://github.com/kadaan/ansible-jinja2-tester'
   
-    binary 'Ansible Jinja2 Tester.app'
+    app 'Ansible Jinja2 Tester.app'
   end
   

@@ -1,6 +1,6 @@
 cask 'devbox' do 
   version '0.10.1-ens001'
-  sha256 'e1c42bad525a7dfa7cc76f203ca1ad0e264ad5d9e3afbb4b9ec8fde53a69da85'
+  sha256 'dff4d7222717ab09d0e072f8220db460dd9e8c0e224829fe8c1af16fa33eb500'
 
   url "https://github.com/Ensighten/homebrew-formulae/releases/download/v#{version}.devbox/devbox-darwin.dmg"
   name 'devbox'

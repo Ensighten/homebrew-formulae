@@ -1,9 +1,9 @@
 cask 'aws-okta' do 
   arch arm: "arm", intel: "intel"
   
-  version '0.0.38'
-  sha256 arm:   '9978ca68b049a66100c2fe9e3fc443e7570da7a041e59efc678d27299a6c1af5',
-         intel: 'c3d91d466b56a91d75f5db2bbadc78e6346cab6385dd93969e8138db825109c4'
+  version '0.0.40'
+  sha256 arm:   '885aaaf078ac9af2599402ffa67f1edb8848e4867ed3b182c7606f8f8b0d20c4',
+         intel: '9cc26caf7f1eba0648e8b780e00b814161e88554e6df3a222d571986619447a0'
 
   url "https://github.com/Ensighten/homebrew-formulae/releases/download/v#{version}.aws-okta/aws-okta-darwin-#{arch}.dmg"
   name 'aws-okta'

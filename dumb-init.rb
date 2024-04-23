@@ -5,7 +5,7 @@ class DumbInit < Formula
   version "1.2.5"
   on_arm do
     url "https://github.com/Ensighten/homebrew-formulae/releases/tag/v#{version}.dumb-init/dumb-init-darwin-arm.tar.bz2"
-    sha256 "f03f591097f0851ea8fe0ab251dfd4c2f5003c7c4399a2426a31f3f1c70c5711"
+    sha256 "4c44cd734f5f84d6e2d874b5151fcdc88834f7f74a904cb7f171b533a8a40b85"
   end
   on_intel do
     url "https://github.com/Ensighten/homebrew-formulae/releases/tag/v#{version}.dumb-init/dumb-init-darwin-intel.tar.bz2"
